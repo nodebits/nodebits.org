@@ -1,7 +1,1 @@
-{
-  "articles": [
-    "articles/myfirst",
-    "articles/test",
-    "articles/another"
-  ]
-}
+{"articles":["articles/test","articles/myfirst","articles/another"],"tags":{"red":["articles/another","articles/test"],"green":["articles/another"],"blue":["articles/another","articles/myfirst"],"node":["articles/test","articles/myfirst"],"database":["articles/test"],"browser":["articles/myfirst"]},"authors":{"authors/creationix":["articles/another","articles/myfirst"],"authors/zefhemel":["articles/test"]}}

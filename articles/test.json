@@ -1,5 +1,6 @@
 {
-  "author": "authors/creationix",
+  "author": "authors/zefhemel",
   "title": "My First Blog Post",
-  "date": "Dec 19, 2011"
+  "date": "Dec 19, 2011",
+  "tags": ["red", "node", "database"]
 }

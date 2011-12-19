@@ -1,5 +1,6 @@
 {
   "author": "authors/creationix",
   "title": "My First Blog Post",
-  "date": "Dec 19, 2011"
+  "date": "Dec 17, 2011",
+  "tags": ["red", "green", "blue"]
 }
