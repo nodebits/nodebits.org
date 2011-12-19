@@ -8,7 +8,7 @@ var port = process.env.PORT || 8080;
 
 Http.createServer(Stack(
   Creationix.log(),
-  Nog(Path.join(__dirname, "nodebits.org"))
+  Nog(Path.join(__dirname))
 )).listen(port);
 console.log("Server listening at http://localhost:%s/", port);
 
