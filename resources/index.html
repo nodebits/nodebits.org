@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+  <title>Nodebits - Bits of inspiration to keep the node spirit alive</title>
+  <link href='http://fonts.googleapis.com/css?family=Unna|EB+Garamond|Ubuntu+Mono' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div style="display:none;"><img src="top_bg_tile.png"/><img src="body_bg_tile.jpg"/></div>
+  <div class="wrapper">
+  <div class="menu">
+    <div class="section">
+      <div class="side-column">
+        <form id="searchbox">
+          <input name="query" class="searchbox" type="text" placeholder="Search Articles" title="Do a full-text search of all articles on nodebits"/>
+        </form>
+      </div>
+    </div>
+  </div >
+  <div class="section header">
+    <img width="727" height="224" class="logo" src="header_illu.png" alt="Nodebits - Bits of inspiration to keep the node spirit alive"/>
+    <div class="follow side-column">
+      <h2>Follow us:</h2>
+      <a href="#rss" class="rss button" title="Subscribe to the RSS feed"></a>
+      <a href="#twitter" class="twitter button" title="Follow us on Twitter"></a>
+    </div>
+  </div>
+  <div class="section body">
+    <div class="main-column">
+      <section class="article">
+        <div class="bookmark">
+          <div class="date">13 Dec 2012</div>
+          <div class="author">
+            <a class="gravitar" href="#gravitar"><img src="http://gravatar.com/avatar/c953ddd239707998340e1a6fbb3eeb46?s=36"/></a>
+            <p><a href="#author">Tim Caswell</a></p>
+          </div>
+        </div>
+        <div class="content">
+          <h1><a href="#object-graphs">Learning Javascript with Object Graphs</a></h1>
+          <p><span class="drop-caps">One</span> of the secrets to being a super effective JavaScript developer is to truly understand the semantics of the language. This article will explain the basic elemental parts of JavaScript using easy to follow diagrams.</p>
+          <h2>References Everywhere</h2>
+          <p>A variable in JavaScript is simply a label that references a value in memory somewhere. These values can be primitives like strings, numbers, and booleans. They can also be objects or functions.</p>
+          <h3>Local Variables</h3>
+          <p>In the following example, we will create four local variables in the top-level scope and point them to some primitive values:</p>
+          <script src="http://gist.github.com/23cfdb0101d5540453c9.js"></script>
+          <img src="http://howtonode.org/object-graphs/variables.dot" style="float:left;"/>
+          <p>Notice that the two boolean variables point to the same value in memory. This is because primitives are immutable and so the VM can optimize and share a single instance for all references to that particular value.</p>
+          <p>In the code snippet we checked to see if the two references pointed to the same value using === and the result was true.</p>
+          <p>The outer box represents the outermost closure scope. These variables are top-level local variables, not to be confused with properties of the global/window object.</p>
+        </div>
+<!--        <div id="disqus_thread"></div>-->
+<!--        <script type="text/javascript">-->
+<!--            var disqus_shortname = 'nodebits';-->
+<!--            var disqus_developer = 1; // developer mode is on-->
+<!--            /* * * DON'T EDIT BELOW THIS LINE * * */-->
+<!--            (function() {-->
+<!--                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;-->
+<!--                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';-->
+<!--                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);-->
+<!--            })();-->
+<!--        </script>-->
+<!--        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>-->
+      </section>
+    </div>
+    <div class="side-column">
+      <select class="filter-dropdown" title="Filter articles by node version">
+        <option>Filter by version 0.6.x</option>
+        <option>Filter by version 0.4.x</option>
+        <option>Filter by version 0.2.x</option>
+        <option>All versions</option>
+      </select></p>
+      <h2>About Nodebits.org</h2>
+      <p>Fusce mattis lorem in lectus pharetra convallis. Sed eu odio elit, nec dictum dolor. Fusce sollicitudin augue in est facilisis mattis. Nulla porttitor pretium venenatis. Sed vehicula, tortor at blandit placerat, metus augue fermentum libero.</p>
+      <div class="dark">
+        <h2>Contributors</h2>
+        <div class="contributors">
+          <a href="#gravitar" class="gravitar" title="Show all articles by Tim Caswell"><img src="http://gravatar.com/avatar/c953ddd239707998340e1a6fbb3eeb46?s=36"/></a>
+          <a href="#gravitar" class="gravitar" title="Show all articles by Matt Pardee"><img src="http://gravatar.com/avatar/c35489faf0667a209d76d72123622e81?s=36"/></a>
+          <a href="#gravitar" class="gravitar" title="Show all articles by Bert Belder"><img src="http://gravatar.com/avatar/3dfe96442969b1e80dd0bfa8d749da97?s=36"/></a>
+          <a href="#gravitar" class="gravitar" title="Show all articles by Zef Hemel"><img src="http://gravatar.com/avatar/666b62cc179681d869c5c60631074729?s=36"/></a>
+          <a href="#gravitar" class="gravitar" title="Show all articles by Chrissy Welsh"><img src="http://gravatar.com/avatar/a88b9ae7c85477a702fc0fcd32dde3a4?s=36"/></a>
+        </div>
+        <h2>Categories</h2>
+        <ul class="categories">
+          <li><a href="#tag" title="Show articles tagged with 'Web Server'">Web Server</a></li>
+          <li><a href="#tag" title="Show articles tagged with 'Real Time'">Real Time</a></li>
+          <li><a href="#tag" title="Show articles tagged with 'Websockets'">Websockets</a></li>
+          <li><a href="#tag" title="Show articles tagged with 'Databases'">Databases</a></li>
+          <li><a href="#tag" title="Show articles tagged with 'Javascript'">JavaScript</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="section footer">
+    <div class="sponsor">
+      <p>Sponsored by:</p>
+      <img src="c9-logo.png"/>
+      <p>Write, Run and Debug your code with our powerful and flexible IDE. Co-edit your code or create public or private projects.</p>
+    </div>
+    <div class="copyright">
+      <p>All code snippets are in the public domain</p>
+      <p>All other content and design is copyright &copy;2011 Cloud9ide. All rights reserved.</p>
+    </div>
+  </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+

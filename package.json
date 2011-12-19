@@ -1,0 +1,18 @@
+{
+  "author": "Tim Caswell <tim@c9.io>",
+  "name": "nodebits.org",
+  "description": "The content for nodebits.org",
+  "version": "0.0.0",
+  "repository": {
+    "url": ""
+  },
+  "engines": {
+    "node": ">0.6.6"
+  },
+  "dependencies": {
+    "stack": "0.1.0",
+    "creationix": "0.2.3",
+    "nog": ">=0.0.0"
+  },
+  "devDependencies": {}
+}
