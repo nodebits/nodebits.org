@@ -14,45 +14,25 @@
       @renderQuery("summary", "index", "articles")
     </div>
     <div class="side-column">
-      <select class="filter-dropdown" title="Filter articles by node version">
-        <option>Filter by version 0.6.x</option>
-        <option>Filter by version 0.4.x</option>
-        <option>Filter by version 0.2.x</option>
-        <option>All versions</option>
+      <p><select class="filter-dropdown" title="Filter articles by node version">
+        <option selected="selected" value="">All versions</option>
+        @renderQuery("version-option", "index", "versions")
       </select></p>
       <h2>About Nodebits.org</h2>
       <p>Fusce mattis lorem in lectus pharetra convallis. Sed eu odio elit, nec dictum dolor. Fusce sollicitudin augue in est facilisis mattis. Nulla porttitor pretium venenatis. Sed vehicula, tortor at blandit placerat, metus augue fermentum libero.</p>
       <div class="dark">
         <h2>Contributors</h2>
         <div class="contributors">
-          <a href="#gravitar" class="gravitar" title="Show all articles by Tim Caswell"><img src="http://gravatar.com/avatar/c953ddd239707998340e1a6fbb3eeb46?s=36"/></a>
-          <a href="#gravitar" class="gravitar" title="Show all articles by Matt Pardee"><img src="http://gravatar.com/avatar/c35489faf0667a209d76d72123622e81?s=36"/></a>
-          <a href="#gravitar" class="gravitar" title="Show all articles by Bert Belder"><img src="http://gravatar.com/avatar/3dfe96442969b1e80dd0bfa8d749da97?s=36"/></a>
-          <a href="#gravitar" class="gravitar" title="Show all articles by Zef Hemel"><img src="http://gravatar.com/avatar/666b62cc179681d869c5c60631074729?s=36"/></a>
-          <a href="#gravitar" class="gravitar" title="Show all articles by Chrissy Welsh"><img src="http://gravatar.com/avatar/a88b9ae7c85477a702fc0fcd32dde3a4?s=36"/></a>
+          @renderQuery("contributor", "index", "authors")
         </div>
         <h2>Categories</h2>
         <ul class="categories">
-          <li><a href="#tag" title="Show articles tagged with 'Web Server'">Web Server</a></li>
-          <li><a href="#tag" title="Show articles tagged with 'Real Time'">Real Time</a></li>
-          <li><a href="#tag" title="Show articles tagged with 'Websockets'">Websockets</a></li>
-          <li><a href="#tag" title="Show articles tagged with 'Databases'">Databases</a></li>
-          <li><a href="#tag" title="Show articles tagged with 'Javascript'">JavaScript</a></li>
+          @renderQuery("tag", "index", "tags")
         </ul>
       </div>
     </div>
   </div>
-  <div class="section footer">
-    <div class="sponsor">
-      <p>Sponsored by:</p>
-      <img src="c9-logo.png"/>
-      <p>Write, Run and Debug your code with our powerful and flexible IDE. Co-edit your code or create public or private projects.</p>
-    </div>
-    <div class="copyright">
-      <p>All code snippets are in the public domain</p>
-      <p>All other content and design is copyright &copy;2011 Cloud9ide. All rights reserved.</p>
-    </div>
-  </div>
+  @render("footer", this)
   </div>
   <script src="script.js"></script>
 </body>

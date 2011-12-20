@@ -2,5 +2,6 @@
   "author": "authors/creationix",
   "title": "My First Blog Post",
   "date": "Dec 18, 2011",
-  "tags": ["node", "browser", "blue"]
+  "tags": ["node", "browser", "blue"],
+  "nodeVersion": "0.6.5"
 }
