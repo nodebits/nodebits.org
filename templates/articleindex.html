@@ -8,23 +8,7 @@
 <body>
   <div style="display:none;"><img src="top_bg_tile.png"/><img src="body_bg_tile.jpg"/></div>
   <div class="wrapper">
-  <div class="menu">
-    <div class="section">
-      <div class="side-column">
-        <form id="searchbox">
-          <input name="query" class="searchbox" type="text" placeholder="Search Articles" title="Do a full-text search of all articles on nodebits"/>
-        </form>
-      </div>
-    </div>
-  </div >
-  <div class="section header">
-    <img width="727" height="224" class="logo" src="header_illu.png" alt="Nodebits - Bits of inspiration to keep the node spirit alive"/>
-    <div class="follow side-column">
-      <h2>Follow us:</h2>
-      <a href="#rss" class="rss button" title="Subscribe to the RSS feed"></a>
-      <a href="#twitter" class="twitter button" title="Follow us on Twitter"></a>
-    </div>
-  </div>
+  @render("header", this)
   <div class="section body">
     <div class="main-column">
       @render("article", this)
