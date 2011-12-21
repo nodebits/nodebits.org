@@ -1,0 +1,25 @@
+<div class="side-column">
+  <p><select class="filter-dropdown" title="Filter articles by node version">
+    <option selected="selected" value="">All versions</option>
+    {#loopQuery("index#versions")}
+      <option value="{version}">Filter by version {version}.x</option>
+    {/loopQuery}
+  </select></p>
+  <h2>About Nodebits.org</h2>
+  <p>Fusce mattis lorem in lectus pharetra convallis. Sed eu odio elit, nec dictum dolor. Fusce sollicitudin augue in est facilisis mattis. Nulla porttitor pretium venenatis. Sed vehicula, tortor at blandit placerat, metus augue fermentum libero.</p>
+  <div class="dark">
+    <h2>Contributors</h2>
+    <div class="contributors">
+      {#loopQuery("index#authors")}
+        <a href="/authors/{_name}" class="gravitar" title="Show all articles by {name}"><img src="http://gravatar.com/avatar/{emailHash}?s=36"/></a>
+      {/loopQuery}
+    </div>
+    <h2>Categories</h2>
+    <ul class="categories">
+      {#loopQuery("index#tags")}
+        <li><a href="/tags/{tag}" title="Show articles tagged with '{tag}'">{tag}</a></li>
+      {/loopQuery}
+    </ul>
+  </div>
+</div>
+
