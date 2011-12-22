@@ -1,0 +1,7 @@
+{
+  "author": "authors/creationix",
+  "title": "Distilled NodeJS Patterns",
+  "date": "Dec 21, 2011",
+  "tags": ["javascript", "control-flow", "best-practices"],
+  "nodeVersion": "0.6.6"
+}
