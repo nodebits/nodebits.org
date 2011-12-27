@@ -1,0 +1,7 @@
+{
+  "author": "authors/creationix",
+  "title": "Hoister, an Example Stack App",
+  "date": "Dec 21, 2011",
+  "tags": ["stack", "http"],
+  "nodeVersion": "0.6.6"
+}
