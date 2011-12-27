@@ -4,7 +4,28 @@ In this article I will explain a few of the patterns that I've discovered over t
 
 ## The Request Batch
 
+When using a non-blocking system like the one in NodeJS, it's very easy to do things that are impossible in blocking systems.  Some of these are bad like running out of file descriptors be you opened the same file 1,000 times in parallel!
+
+For example, using blocking I/O, this is safe:
+
+    #@distilled-patterns/blockingloop.js
+
+Each call to `FS.readFileSync`
+
+    #@distilled-patterns/batch.js
+
+
 ## The Request Cache
+
+    #@distilled-patterns/cache.js
+
+cache with batch
+
+    #@distilled-patterns/cachebatch.js
+
+cache with timer
+
+    #@distilled-patterns/cachetimer.js
 
 ## The Done Flag
 

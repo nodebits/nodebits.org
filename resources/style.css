@@ -8,7 +8,7 @@ body {
 }
 pre,
 code {
-  font-family: 'Ubuntu Mono', monospace !important;
+  font-family: 'Ubuntu Mono', "Monaco", monospace !important;
 }
 .wrapper {
   background: url("top_bg_tile.png") repeat-x;
@@ -173,6 +173,18 @@ code {
   line-height: 40px;
   font-size: 50px;
   padding-right: 10px;
+}
+.article pre.code {
+  background-color: #eee;
+  padding: 5px;
+}
+.article pre.output {
+  display: none;
+  padding: 5px;
+  background-color: #333;
+  color: #fff;
+  max-height: 200px;
+  overflow: auto;
 }
 .menu {
   height: 47px;
