@@ -8,7 +8,7 @@ body {
 }
 pre,
 code {
-  font-family: 'Ubuntu Mono', "Monaco", monospace !important;
+  font-family: 'Ubuntu Mono', Monaco, Consolas, monospace !important;
 }
 .wrapper {
   background: url("top_bg_tile.png") repeat-x;
@@ -162,7 +162,7 @@ code {
 }
 .article p {
   font-size: 16px;
-  line-height: 20px;
+  line-height: 21px;
   text-align: justify;
 }
 .article .drop-caps {
@@ -174,17 +174,33 @@ code {
   font-size: 50px;
   padding-right: 10px;
 }
+.article div.snippet {
+  margin: 1em 0;
+}
+.article pre {
+  font-size: 15px;
+  padding: 5px;
+  border-radius: 3px;
+}
+.article pre .toggle {
+  float: right;
+  margin-top: -5px;
+  margin-right: -5px;
+}
 .article pre.code {
   background-color: #eee;
-  padding: 5px;
+  max-height: 300px;
+  overflow: auto;
 }
 .article pre.output {
   display: none;
-  padding: 5px;
   background-color: #333;
   color: #fff;
   max-height: 200px;
   overflow: auto;
+}
+.article pre.output .stderr {
+  font-style: italic;
 }
 .menu {
   height: 47px;
