@@ -1,8 +1,8 @@
 <div class="side-column">
   <p><select class="filter-dropdown" title="Filter articles by node version">
-    <option selected="selected" value="">All versions</option>
+    <option value="">All versions</option>
     {#loopQuery("index#versions")}
-      <option value="{version}">Filter by version {version}.x</option>
+      <option value="{version}"{req.query.node_version==version?" selected":""}>Filter by version {version}.x</option>
     {/loopQuery}
   </select></p>
   <h2>About Nodebits.org</h2>

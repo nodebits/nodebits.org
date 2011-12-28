@@ -11,6 +11,17 @@
   {render("header", this)}
   <div class="section body">
     <div class="main-column">
+      {#blockIf(!articles.length)}
+        <p>Sorry, Your node version query has filtered out all the articles on this page.  Try one of the following.</p>
+        <ul>
+          <li><a href="{req.uri.pathname}?node_version=">Show All Versions</a></li>
+          {#loopQuery("index#versions")}
+            {#blockIf(req.query.node_version!==version)}
+              <li><a href="{req.uri.pathname}?node_version={version}">Filter by version {version}.x</a></li>
+            {/blockIf}
+          {/loopQuery}
+        </ul>
+      {/blockIf}
       {#loopQuery(articles)}
         <section class="article">
           <div class="bookmark">
@@ -34,7 +45,7 @@
   </div>
   {render("footer", this)}
   </div>
-  <script src="script.js"></script>
+  <script src="/script.js"></script>
 </body>
 </html>
 

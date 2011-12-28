@@ -4,7 +4,7 @@
   <title>Nodebits - Bits of inspiration to keep the node spirit alive</title>
   <link href='http://fonts.googleapis.com/css?family=Unna|EB+Garamond|Ubuntu+Mono' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="style.css"/>
-  <script src="script.js"></script>
+  <script src="/script.js"></script>
 </head>
 <body>
   <div style="display:none;"><img src="top_bg_tile.png"/><img src="body_bg_tile.jpg"/></div>
@@ -12,21 +12,7 @@
   {render("header", this)}
   <div class="section body">
     <div class="main-column">
-      <section class="article">
-        <div class="bookmark">
-          <div class="date">{date}</div>
-          {#blockQuery(author)}
-            <div class="author">
-              <span class="gravitar"><img src="http://gravatar.com/avatar/{emailHash}?s=36"/></span>
-              <p><a href="{author}" title="Show all articles by {name}">{name}</a></p>
-            </div>
-          {/blockQuery}
-        </div>
-        <div class="content">
-          <h1><a href="/{_name}">{title}</a></h1>
-          {markdown(attachment)}
-        </div>
-      </section>
+      {render("article", article)}
     </div>
     {render("sidebar", this)}
   </div>

@@ -51,6 +51,12 @@ window.addEventListener('load', function (evt) {
     return false;
   };
   
+  var dropdown = document.querySelector("select.filter-dropdown");
+  console.log("dropdown", dropdown);
+  dropdown.addEventListener('change', function (evt) {
+    document.location = "/?node_version=" + dropdown.value;
+  }, true);
+  
   var snippets = document.querySelectorAll("div.snippet");
   Array.prototype.forEach.call(snippets, function (root) {
     var snippetPath = root.getAttribute('source');
