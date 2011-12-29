@@ -8,24 +8,23 @@ When using a non-blocking system like the one in NodeJS, it's very easy to do th
 
 For example, using blocking I/O, this is safe:
 
-    #@distilled-patterns/blockingloop.js
+    #@git://gist.github.com/1535168.git#blockingloop.js
 
 Each call to `FS.readFileSync`
 
-    #@distilled-patterns/batch.js
-
+    #@git://gist.github.com/1535168.git#batch.js
 
 ## The Request Cache
 
-    #@distilled-patterns/cache.js
+    #@git://gist.github.com/1535168.git#cache.js
 
 cache with batch
 
-    #@distilled-patterns/cachebatch.js
+    #@git://gist.github.com/1535168.git#cachebatch.js
 
 cache with timer
 
-    #@distilled-patterns/cachetimer.js
+    #@git://gist.github.com/1535168.git#cachetimer.js
 
 ## The Done Flag
 
