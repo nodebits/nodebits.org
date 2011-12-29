@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "stack": "0.1.0",
-    "creationix": "0.2.3",
+    "creationix": ">=0.3.0",
     "nog": ">=0.0.0"
   },
   "devDependencies": {}
