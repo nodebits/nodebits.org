@@ -8,7 +8,7 @@ When using a non-blocking system like the one in NodeJS, it's very easy to do th
 
 For example, using blocking I/O, this is safe:
 
-    #@git://gist.github.com/1535168.git#blockingloop.js
+    #@git://gist.github.com/1535168.git#blockingloop.js,3-5
 
 Each call to `FS.readFileSync`
 
