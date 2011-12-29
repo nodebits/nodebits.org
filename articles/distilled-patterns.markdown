@@ -10,7 +10,11 @@ For example, using blocking I/O, this is safe:
 
     #@git://gist.github.com/1535168.git#blockingloop.js,3-5
 
-Each call to `FS.readFileSync`
+Each call to `FS.readFileSync` waits for the disk I/O to complete before returning.  This means that you will never have more than one file open at a time.  Not so with non-blocking I/O:
+
+    #@git://gist.github.com/1535168.git#nonblockingloop.js,3-7
+
+So we should batch things
 
     #@git://gist.github.com/1535168.git#batch.js
 
