@@ -122,6 +122,8 @@ code,
 .article {
   margin-top: 20px;
   min-height: 150px;
+/*Put a clearfix hack on ace_editor so it doesn't have float issues*/
+/*TODO: Fix in ace or snippet tool*/
 }
 .article h1 {
   font-family: 'Unna', serif;
@@ -175,33 +177,16 @@ code,
   font-size: 50px;
   padding-right: 10px;
 }
-.article div.snippet {
+.article .ace_editor:before,
+.article .ace_editor:after {
+  content: "";
+  display: table;
+}
+.article .ace_editor:after {
+  clear: both;
+}
+.article .snip-container {
   margin: 1em 0;
-}
-.article pre {
-  font-size: 15px;
-  padding: 5px;
-  border-radius: 3px;
-}
-.article pre .toggle {
-  float: right;
-  margin-top: -5px;
-  margin-right: -5px;
-}
-.article pre.code {
-  background-color: #eee;
-  max-height: 300px;
-  overflow: auto;
-}
-.article pre.output {
-  display: none;
-  background-color: #333;
-  color: #fff;
-  max-height: 200px;
-  overflow: auto;
-}
-.article pre.output .stderr {
-  font-style: italic;
 }
 .menu {
   height: 47px;
