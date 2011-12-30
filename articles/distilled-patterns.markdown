@@ -8,11 +8,11 @@ When using a non-blocking system like the one in NodeJS, it's very easy to do th
 
 For example, using blocking I/O, this is safe:
 
-    #@git://gist.github.com/1535168.git#blockingloop.js,3-5
+    #@git://github.com/nodebits/distilled-patterns.git#blockingloop.js,3-5
 
 Each call to `FS.readFileSync` waits for the disk I/O to complete before returning.  This means that you will never have more than one file open at a time.  Not so with non-blocking I/O:
 
-    #@git://gist.github.com/1535168.git#nonblockingloop.js,7-9
+    #@git://github.com/nodebits/distilled-patterns.git#nonblockingloop.js,7-9
 
 If you run this script, you will get the following output:
 
@@ -29,11 +29,11 @@ One easy fix for this is to not try to open the same file more than once at a ti
 
 Let's implement a wrapper around `FS.readFile` that implements a request batch:
 
-    #@git://gist.github.com/1535168.git#batch.js,7-32
+    #@git://github.com/nodebits/distilled-patterns.git#batch.js,7-32
 
 And then call the wrapper instead in our loop:
 
-    #@git://gist.github.com/1535168.git#batch.js,34-36
+    #@git://github.com/nodebits/distilled-patterns.git#batch.js,34-36
 
 This doesn't run out of file descriptors because the request is only actually done once!  This pattern when applied to expensive or resource consuming requests can make your nodeJS application faster and more robust.
 
@@ -43,11 +43,11 @@ The batch pattern is fine and dandy for when you're pounding your webserver with
 
 The most simple cache simply stores the result in memory forever and short-cuts the request if the same request is made again.
 
-    #@git://gist.github.com/1535168.git#cache.js,7-27
+    #@git://github.com/nodebits/distilled-patterns.git#cache.js,7-27
 
 Since we want to test sequential requests and not concurrent requests, we will call the function 10,000 times in chained callbacks.
 
-    #@git://gist.github.com/1535168.git#cache.js,30-36
+    #@git://github.com/nodebits/distilled-patterns.git#cache.js,30-36
 
 Now we can make 10,000 requests serially and it's only actually loaded once.  If you've done this before, you're probably worried about two things right now.
 
@@ -56,15 +56,15 @@ Now we can make 10,000 requests serially and it's only actually loaded once.  If
 
 Ok, so point one is easy.  Just combine the batching and caching strategy into the same function.  They perform different tasks and protect against different usage patterns.
 
-    #@git://gist.github.com/1535168.git#cachebatch.js,7-28
+    #@git://github.com/nodebits/distilled-patterns.git#cachebatch.js,7-28
 
 And to test this combined wrapper, we'll combine the tests and request it 10,000 times concurrently 10,000 times serially (yes that's 10,000×10,000 requests)!
 
-    #@git://gist.github.com/1535168.git#cachebatch.js,31-39
+    #@git://github.com/nodebits/distilled-patterns.git#cachebatch.js,31-39
 
 Cache invalidation is a bit harder, but a simple solution is to just expire the cache after a short while.  This can be done with a simple `setTimeout` when setting the cache value.
 
-    #@git://gist.github.com/1535168.git#cachetimer.js
+    #@git://github.com/nodebits/distilled-patterns.git#cachetimer.js
 
 ## The Done Flag
 
