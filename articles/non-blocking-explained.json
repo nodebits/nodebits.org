@@ -3,5 +3,5 @@
   "title": "Non-Blocking Execution Explained",
   "date": "Dec 23, 2011",
   "tags": ["control-flow", "javascript"],
-  "nodeVersion": "0.6.6"
+  "nodeVersion": "0.4.12"
 }
