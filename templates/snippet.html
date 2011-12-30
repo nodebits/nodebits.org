@@ -1,14 +1,1 @@
-(function () {
-  var tags = document.querySelectorAll("script");
-  var tag;
-  for (var i = 0,l = tags.length; i < l; i++) {
-    var t = tags[i];
-    if (t.getAttribute('src') === {url}) tag = t;
-  }
-  if (!tag) return;
-  var pre = document.createElement('pre');
-  var code = document.createElement('code');
-  pre.appendChild(code);
-  code.textContent = {code};
-  tag.parentNode.replaceChild(pre, tag);
-})()
+<pre class="prettyprint"><a class="filename" href="#IDE" title="Run in Cloud9IDE">{query.file}</a><code>{code}</code></pre>

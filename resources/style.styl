@@ -1,3 +1,4 @@
+
 box-shadow()
   -webkit-box-shadow arguments
   -moz-box-shadow arguments
@@ -175,12 +176,30 @@ pre, code, .ace_editor {
   }
 
   pre {
-    padding: 5px;
-    background-color: #f9f9f9;
+    padding: 8px !important;
+    background-color: #222;
+    color: #fff;
     box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.35) inset;
-
+    border-radius: 0px;
+    border: 0 !important;
+    overflow: hidden;
+    line-height: 1.2em;
+    .filename {
+      padding: 3px 5px;
+    }
+    .filename {
+      background: #fff;
+      color: #000;
+      float: right;
+      margin: -10px -10px 0 4px;
+      border-radius: 0 0 0 3px;
+      opacity: 0.4;
+    }
+    .filename:hover {
+      opacity: 0.7;
+      text-decoration: none;
+    }
     code {
-
     }
   }
   .drop-caps {
