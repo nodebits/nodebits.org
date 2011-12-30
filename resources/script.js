@@ -13,7 +13,6 @@ window.addEventListener('load', function (evt) {
   };
 
   var dropdown = document.querySelector("select.filter-dropdown");
-  console.log("dropdown", dropdown);
   dropdown.addEventListener('change', function (evt) {
     document.location = "/?node_version=" + dropdown.value;
   }, true);
