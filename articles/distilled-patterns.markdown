@@ -2,7 +2,7 @@ Every once in a while in the progress of a new technology, it's good to take a m
 
 In this article I will explain a few of the patterns that I've discovered over the years.  They mostly have to deal with control-flow and resource management.
 
-## The "EMFILE, too many open files" Error
+## On Power and Responsibility
 
 NodeJS uses a very powerful I/O model where all operations are non-blocking.  This makes many new things possible such as reading two files in parallel.  It also creates many new pitfalls.  For example, it's possible to run out of file descriptors because you opened the same file 10,000 times in parallel!
 
