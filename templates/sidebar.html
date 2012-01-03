@@ -1,5 +1,5 @@
 <div class="side-column">
-  <p><select class="filter-dropdown" title="Filter articles by node version">
+  <p class="artiles-dropdown"><select class="filter-dropdown" title="Filter articles by node version">
     <option value="">All versions</option>
     {#loopQuery("index#versions")}
       <option value="{version}"{req.query.node_version==version?" selected":""}>Filter by version {version}.x</option>

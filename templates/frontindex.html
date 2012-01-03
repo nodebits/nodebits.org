@@ -37,8 +37,18 @@
           <div class="content">
             <h1><a href="/{_name}">{title}</a></h1>
             {markdownTruncated(attachment)}
-            <p><a href="/{_name}">Read More...</a></p>
+            <div class="artile-actions">
+                <div class="social-buttons">
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="/{_name}">Tweet</a>
+                    <div class="g-plusone" data-size="tall" data-annotation="none" data-href="/{_name}"></div>
+                    <div class="fb-like" data-href="/{_name}" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
+                </div>
+                <div class="article-links">
+                    <a href="/{_name}">Read More...</a>
+                </div>
+            </div>
           </div>
+          <div class="article-divider"></div>
         </section>
       {/loopQuery}
     </div>
@@ -47,6 +57,25 @@
   {render("footer", this)}
   </div>
   <script src="/script.js"></script>
+  <div id="fb-root"></div>
+  <script>
+    //facebook like button
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    
+    //google+ button
+    (function() {
+      var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+      po.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+    //twitter button
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </body>
 </html>
 

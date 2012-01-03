@@ -40,19 +40,23 @@ pre, code, .ace_editor {
   color: rgba(0,0,0,0.7);
   h2 {
     font-family: serif;
-    font-size: 26px;
+    font-size: 25px;
     font-weight: normal;
     margin: 0 0 10px 0;
   }
   p {
-    margin: 0 0 10px 0;
+    margin: 0 0 40px 0;
     font-size: 14px;
     line-height: 1.5em;
   }
 }
 
+.artiles-dropdown {
+    margin-bottom: 30px;
+}
+
 .contributors .gravitar {
-  margin-top: 0; margin-bottom: 10px;
+   margin: 0 10px 10px 0;
 }
 
 .gravitar {
@@ -69,11 +73,13 @@ pre, code, .ace_editor {
     border: 0; margin: 0; padding: 0;
   }
 }
-
+.contributors {
+  margin: 0 0 30px 0;  
+}
 .categories {
   font-family: 'Unna', serif;
   padding: 0;
-  margin: 0;
+  margin: 0 0 30px 0;
   li {
     list-style-type: none;
     margin: 0;
@@ -114,9 +120,9 @@ pre, code, .ace_editor {
     text-align: center;
     width: 60px;
     p {
-      text-align: center;
+      text-align: left;
       margin: 0;
-      padding: 0 4px;
+      padding: 0 0 0 10px;
       font-size: 12px;
       line-height: 1.2em;
     }
@@ -125,10 +131,10 @@ pre, code, .ace_editor {
 
 .article {
   margin-top: 20px;
-  min-height: 150px;
+  min-height: 170px;
   h1 {
     font-family: 'Unna', serif;
-    font-size: 32px;
+    font-size: 36px;
     font-weight: normal;
     margin: 0;
     line-height: 1.2em;
@@ -162,9 +168,8 @@ pre, code, .ace_editor {
   }
 
   p {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 21px;
-    text-align: justify;
     code {
       display: inline-block;
       background-color: #f9f9f9;
@@ -210,6 +215,7 @@ pre, code, .ace_editor {
     line-height: 40px;
     font-size: 50px;
     padding-right: 10px;
+    padding-bottom: 10px;
   }
 
   /*Put a clearfix hack on ace_editor so it doesn't have float issues*/
@@ -226,6 +232,34 @@ pre, code, .ace_editor {
     margin: 1em 0;
   }
 
+}
+
+.social-buttons {
+
+}
+.social-buttons > div {
+    float: left !important;
+}
+.twitter-share-button {
+    float: left;
+    width: 90px !important;
+}
+.fb-like {
+    width: 100px;
+    padding-left: 15px;
+    overflow: hidden;
+}
+.article-links {
+    text-align: right;
+}
+.article-links a {
+    font-size: 14px;
+}
+.article-divider {
+    background: url(article-divider.png) no-repeat scroll 0 0;
+    display: block;
+    height: 23px;
+    width: 616px;
 }
 
 .menu {
@@ -296,14 +330,14 @@ pre, code, .ace_editor {
 .footer {
   font-family: 'EB Garamond', serif;
   background: #383838 url(footer.jpg) bottom repeat-x;
-  color: #999;
+  color: #757575;
   font-size: 13px;
   margin-bottom: 40px;
   p {
     margin: 0;
   }
   .sponsor {
-    padding: 20px 40px;
+    padding: 20px 40px 30px;
     width: 470px;
     display: inline-block;
   }

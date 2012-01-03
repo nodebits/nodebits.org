@@ -39,18 +39,20 @@ code,
 }
 .side-column h2 {
   font-family: serif;
-  font-size: 26px;
+  font-size: 25px;
   font-weight: normal;
   margin: 0 0 10px 0;
 }
 .side-column p {
-  margin: 0 0 10px 0;
+  margin: 0 0 40px 0;
   font-size: 14px;
   line-height: 1.5em;
 }
+.artiles-dropdown {
+  margin-bottom: 30px;
+}
 .contributors .gravitar {
-  margin-top: 0;
-  margin-bottom: 10px;
+  margin: 0 10px 10px 0;
 }
 .gravitar {
   display: inline-block;
@@ -68,10 +70,13 @@ code,
   margin: 0;
   padding: 0;
 }
+.contributors {
+  margin: 0 0 30px 0;
+}
 .categories {
   font-family: 'Unna', serif;
   padding: 0;
-  margin: 0;
+  margin: 0 0 30px 0;
 }
 .categories li {
   list-style-type: none;
@@ -114,21 +119,21 @@ code,
   width: 60px;
 }
 .bookmark .author p {
-  text-align: center;
+  text-align: left;
   margin: 0;
-  padding: 0 4px;
+  padding: 0 0 0 10px;
   font-size: 12px;
   line-height: 1.2em;
 }
 .article {
   margin-top: 20px;
-  min-height: 150px;
+  min-height: 170px;
 /*Put a clearfix hack on ace_editor so it doesn't have float issues*/
 /*TODO: Fix in ace or snippet tool*/
 }
 .article h1 {
   font-family: 'Unna', serif;
-  font-size: 32px;
+  font-size: 36px;
   font-weight: normal;
   margin: 0;
   line-height: 1.2em;
@@ -165,9 +170,8 @@ code,
   text-decoration: underline;
 }
 .article p {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 21px;
-  text-align: justify;
 }
 .article p code {
   display: inline-block;
@@ -214,6 +218,7 @@ code,
   line-height: 40px;
   font-size: 50px;
   padding-right: 10px;
+  padding-bottom: 10px;
 }
 .article .ace_editor:before,
 .article .ace_editor:after {
@@ -225,6 +230,30 @@ code,
 }
 .article .snip-container {
   margin: 1em 0;
+}
+.social-buttons > div {
+  float: left !important;
+}
+.twitter-share-button {
+  float: left;
+  width: 90px !important;
+}
+.fb-like {
+  width: 100px;
+  padding-left: 15px;
+  overflow: hidden;
+}
+.article-links {
+  text-align: right;
+}
+.article-links a {
+  font-size: 14px;
+}
+.article-divider {
+  background: url("article-divider.png") no-repeat scroll 0 0;
+  display: block;
+  height: 23px;
+  width: 616px;
 }
 .menu {
   height: 47px;
@@ -298,7 +327,7 @@ code,
 .footer {
   font-family: 'EB Garamond', serif;
   background: #383838 url("footer.jpg") bottom repeat-x;
-  color: #999;
+  color: #757575;
   font-size: 13px;
   margin-bottom: 40px;
 }
@@ -306,7 +335,7 @@ code,
   margin: 0;
 }
 .footer .sponsor {
-  padding: 20px 40px;
+  padding: 20px 40px 30px;
   width: 470px;
   display: inline-block;
 }
