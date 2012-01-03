@@ -10,7 +10,8 @@ window.addEventListener('load', function (evt) {
     if (query) {
       input.value = "";
       input.blur();
-      alert("TODO: query " + query);
+      var url = "https://www.google.com/search?q=" + encodeURIComponent("site:nodebits.org " + query);
+      window.open(url);
     }
     return false;
   };
