@@ -132,6 +132,7 @@ code,
 /*TODO: Fix in ace or snippet tool*/
 }
 .article h1 {
+  padding-top: 5px;
   font-family: 'Unna', serif;
   font-size: 36px;
   font-weight: normal;
@@ -220,6 +221,9 @@ code,
   padding-right: 10px;
   padding-bottom: 10px;
 }
+.article .content {
+  min-height: 90px;
+}
 .article .ace_editor:before,
 .article .ace_editor:after {
   content: "";
@@ -254,6 +258,7 @@ code,
   display: block;
   height: 23px;
   width: 616px;
+  margin-top: 20px;
 }
 .menu {
   height: 47px;
