@@ -39,9 +39,9 @@
             {markdownTruncated(attachment)}
             <div class="artile-actions">
                 <div class="social-buttons">
-                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="/{_name}">Tweet</a>
-                    <div class="g-plusone" data-size="tall" data-annotation="none" data-href="/{_name}"></div>
-                    <div class="fb-like" data-href="/{_name}" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://{req.headers.host}/{_name}">Tweet</a>
+                    <div class="g-plusone" data-size="tall" data-annotation="none" data-href="http://{req.headers.host}/{_name}"></div>
+                    <div class="fb-like" data-href="http://{req.headers.host}/{_name}" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
                 </div>
                 <div class="article-links">
                     <a href="/{_name}">Read More...</a>
