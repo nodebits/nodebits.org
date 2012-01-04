@@ -325,8 +325,7 @@ img {
 }
 .body .dark {
   background-color: #000;
-  opacity: 0.5;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  background-color: rgba(0,0,0,0.50);
   color: #fff;
   width: 236px;
   padding: 20px;
