@@ -199,10 +199,10 @@ img {
   overflow: hidden;
   line-height: 1.2em;
 }
-.article pre .filename {
+.article .filename {
   padding: 3px 5px;
 }
-.article pre .filename {
+.article .filename {
   background: #fff;
   color: #000;
   float: right;
@@ -210,7 +210,7 @@ img {
   border-radius: 0 0 0 3px;
   opacity: 0.4;
 }
-.article pre .filename:hover {
+.article .filename:hover {
   opacity: 0.7;
   text-decoration: none;
 }
