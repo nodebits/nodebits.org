@@ -41,15 +41,17 @@ img {
   color: rgba(0,0,0,0.70);
 }
 .side-column h2 {
-  font-family: serif;
-  font-size: 25px;
+  font-family: 'Unna', serif;
+  font-size: 28px;
   font-weight: normal;
-  margin: 0 0 10px 0;
+  margin: 0 0 5px 0;
+  color: #3b1a0d;
 }
 .side-column p {
   margin: 0 0 40px 0;
   font-size: 14px;
   line-height: 1.5em;
+  color: #361308;
 }
 .artiles-dropdown {
   margin-bottom: 30px;
@@ -79,7 +81,7 @@ img {
 .categories {
   font-family: 'Unna', serif;
   padding: 0;
-  margin: 0 0 30px 0;
+  margin: 0 0 30px 2px;
 }
 .categories li {
   list-style-type: none;
@@ -90,7 +92,9 @@ img {
 .categories a,
 .categories a:visited {
   color: #bbd284;
+  font-size: 18px;
   text-decoration: none;
+  font-family: 'Unna', serif;
 }
 .categories a:hover,
 .categories a:active {
@@ -108,7 +112,7 @@ img {
   margin-top: 10px;
   text-align: center;
   background: url("ribbon.png") no-repeat;
-  font-family: sans-serif;
+  font-family: 'Cabin', sans-serif;
   font-size: 16px;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.50);
   line-height: 20px;
@@ -220,7 +224,7 @@ img {
   display: block;
   float: left;
   line-height: 40px;
-  font-size: 50px;
+  font-size: 48px;
   padding-right: 10px;
   padding-bottom: 10px;
 }
@@ -254,6 +258,7 @@ img {
   text-align: right;
 }
 .article-links a {
+  font-family: 'Unna', serif;
   font-size: 14px;
 }
 .article-divider {
@@ -279,6 +284,7 @@ img {
   -webkit-box-shadow: 2px 0px 2px rgba(0,0,0,0.50);
   -moz-box-shadow: 2px 0px 2px rgba(0,0,0,0.50);
   box-shadow: 2px 0px 2px rgba(0,0,0,0.50);
+  font-family: Arial;
 }
 .header .logo {
   float: left;
@@ -288,6 +294,7 @@ img {
 .header .follow h2 {
   margin: 40px 0 10px 0;
   padding: 0;
+  font-family: 'Unna', serif;
 }
 .header .follow .button {
   background-image: url("buttons.png");
@@ -325,7 +332,7 @@ img {
 }
 .body .dark {
   background-color: #000;
-  background-color: rgba(0,0,0,0.50);
+  background-color: rgba(0,0,0,0.36);
   color: #fff;
   width: 236px;
   padding: 20px;
@@ -333,11 +340,15 @@ img {
   padding-bottom: 10000px;
   margin-bottom: -10000px;
 }
+.body .dark h2 {
+  color: #fefefe;
+}
 .footer {
-  font-family: 'EB Garamond', serif;
+  font-family: 'Garamond', serif;
   background: #383838 url("footer.jpg") bottom repeat-x;
   color: #757575;
-  font-size: 13px;
+  font-size: 12px;
+  font-weight: bold;
   margin-bottom: 40px;
 }
 .footer p {
