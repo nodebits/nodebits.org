@@ -315,13 +315,16 @@ img {
 .header .follow .twitter:hover {
   background-position: 71px 71px;
 }
+.body {
+  overflow: hidden;
+}
 .body .main-column {
   background: #fff;
-  -webkit-box-shadow: 0 3px 5px #000;
-  -moz-box-shadow: 0 3px 5px #000;
-  box-shadow: 0 3px 5px #000;
-  padding-bottom: 0;
-  margin-bottom: 0;
+  -webkit-box-shadow: 0 0 10px #000;
+  -moz-box-shadow: 0 0 10px #000;
+  box-shadow: 0 0 10px #000;
+  padding-bottom: 10000px;
+  margin-bottom: -10000px;
 }
 .body .filter-dropdown {
   width: 230px;
@@ -332,8 +335,10 @@ img {
   background-color: rgba(0,0,0,0.36);
   color: #fff;
   width: 236px;
-  padding: 20px 20px 25px;
+  padding: 20px;
   margin: 0 -20px;
+  padding-bottom: 10000px;
+  margin-bottom: -10000px;
 }
 .body .dark h2 {
   color: #fefefe;
