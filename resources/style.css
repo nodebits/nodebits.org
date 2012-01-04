@@ -114,7 +114,7 @@ img {
   background: url("ribbon.png") no-repeat;
   font-family: 'Cabin', sans-serif;
   font-size: 16px;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.50);
+  text-shadow: 0 1px 1px #097503;
   line-height: 20px;
   font-weight: bold;
   color: #fff;
@@ -351,6 +351,11 @@ img {
   font-size: 12px;
   font-weight: bold;
   margin-bottom: 40px;
+  -webkit-box-shadow: 0 3px 5px 0 #000;
+  -moz-box-shadow: 0 3px 5px 0 #000;
+  -webkit-box-shadow: 0 3px 5px 0 #000;
+  -moz-box-shadow: 0 3px 5px 0 #000;
+  box-shadow: 0 3px 5px 0 #000;
 }
 .footer p {
   margin: 0;
