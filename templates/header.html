@@ -1,17 +1,13 @@
-<div class="menu">
-  <div class="section">
-    <div class="side-column">
-      <form id="searchbox">
-        <input name="query" class="searchbox" type="text" placeholder="Search Articles" title="Do a full-text search of all articles on nodebits"/>
-      </form>
-    </div>
-  </div>
-</div >
 <div class="section header">
   <a href="/">
     <img width="727" height="224" class="logo" src="/header_illu.png" alt="Nodebits - Bits of inspiration to keep the node spirit alive"/>
   </a>
   <div class="follow side-column">
+    <div class="side-column">
+      <form id="searchbox">
+        <input name="query" class="searchbox" type="text" placeholder="Search Articles" title="Do a full-text search of all articles on nodebits"/>
+      </form>
+    </div>
     <h2>Follow us:</h2>
     <a href="{req.uri.pathname.length===1?"":req.uri.pathname}/feed.xml" class="rss button" title="Subscribe to the RSS feed"></a>
     <a href="https://twitter.com/Nodebits" class="twitter button" title="Follow us on Twitter"></a>

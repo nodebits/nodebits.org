@@ -268,10 +268,8 @@ img {
   width: 616px;
   margin-top: 20px;
 }
-.menu {
+.searchbox {
   height: 47px;
-}
-.menu .searchbox {
   margin: 10px 0;
   display: inline-block;
   height: 19px;
@@ -320,9 +318,9 @@ img {
 }
 .body .main-column {
   background: #fff;
-  -webkit-box-shadow: 0 0 10px #000;
-  -moz-box-shadow: 0 0 10px #000;
-  box-shadow: 0 0 10px #000;
+  -webkit-box-shadow: 0 3px 5px #000;
+  -moz-box-shadow: 0 3px 5px #000;
+  box-shadow: 0 3px 5px #000;
   padding-bottom: 10000px;
   margin-bottom: -10000px;
 }
