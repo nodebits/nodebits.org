@@ -270,7 +270,7 @@ img {
 }
 .searchbox {
   height: 47px;
-  margin: 10px 0;
+  margin: 45px 0 6px 20px;
   display: inline-block;
   height: 19px;
   border: 0;
@@ -290,7 +290,7 @@ img {
   position: relative;
 }
 .header .follow h2 {
-  margin: 40px 0 10px 0;
+  margin: 40px 0 0 0;
   padding: 0;
   font-family: 'Unna', serif;
 }
