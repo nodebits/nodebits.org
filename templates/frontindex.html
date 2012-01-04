@@ -12,6 +12,7 @@
   <div class="wrapper">
   {render("header", this)}
   <div class="section body">
+    {render("sidebar", this)}
     <div class="main-column">
       {#blockIf(!articles.length)}
         <p>Sorry, Your node version query has filtered out all the articles on this page.  Try one of the following.</p>
@@ -53,8 +54,6 @@
         </section>
       {/loopQuery}
     </div>
-    {render("sidebar", this)}
-    <br clear="all"/>
   </div>
   {render("footer", this)}
   </div>
