@@ -1,0 +1,7 @@
+{
+  "author": "authors/creationix",
+  "title": "Build a File Hoister",
+  "date": "Jan 4, 2012",
+  "tags": ["http", "stack", "sample-app"],
+  "nodeVersion": "0.6.6"
+}
