@@ -251,7 +251,7 @@ img {
   padding-right: 10px;
 }
 .article .content {
-  min-height: 90px;
+  min-height: 150px;
 }
 .article .ace_editor:before,
 .article .ace_editor:after {
