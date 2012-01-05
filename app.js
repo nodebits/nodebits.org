@@ -8,7 +8,7 @@ blog.warehouse();
 
 module.exports = Stack.compose(
   Creationix.postReceive("/post-receive", Path.join(__dirname, "/post-receive.sh"), blog.warehouse),
-  Creationix.vhost({"nodebits.org": blog})
+  blog
 );
 
 

@@ -23,6 +23,8 @@ If you run this script, you will get the following output:
 
 The problem here is that since the async version of `FS.readFile` is non-blocking, each call starts a background reading of the file and returns immediately.  The for loop will try to open the same file 10,000 times at once and run out of file descriptors on most systems.
 
+-------------------------
+
 ## The Request Batch
 
 One easy fix for this is to not try to open the same file more than once at a time.  A simple batch system can check if the requested resource is already being loaded and piggyback on that existing request instead of making a new concurrent one.
