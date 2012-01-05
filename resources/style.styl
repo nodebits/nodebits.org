@@ -4,14 +4,26 @@ box-shadow()
   -moz-box-shadow arguments
   box-shadow arguments
 
+code-font()
+  font-family 'Ubuntu Mono', Monaco, Consolas, monospace !important
+
+body-font()
+  font-family Georgia, serif
+
+display-font()
+  font-family Unna, serif
+
+sans-font()
+  font-family Ubuntu, sans-serif
+
 body {
-  font-family: Georgia, serif;
+  body-font()
   background: #8b4c30 url(body_bg_tile.jpg);
   margin: 0; padding: 0; border: 0;
   min-width: 1024px;
 }
 pre, code, .ace_editor {
-  font-family: 'Ubuntu Mono', Monaco, Consolas, monospace !important;
+  code-font()
   font-size: 16px !important;
 }
 
@@ -42,7 +54,7 @@ img {
   padding: 0 20px;
   color: rgba(0,0,0,0.7);
   h2 {
-    font-family: 'Unna', serif;
+    display-font()
     font-size: 28px;
     font-weight: normal;
     margin: 0 0 5px 0;
@@ -82,7 +94,7 @@ img {
   margin: 0 0 30px 0;  
 }
 .categories {
-  font-family: 'Unna', serif;
+  display-font()
   padding: 0;
   margin: 0 0 30px 2px;
   li {
@@ -95,7 +107,7 @@ img {
     color: #bbd284;
     font-size: 18px;
     text-decoration: none;
-    font-family: 'Unna', serif;
+    display-font()
   }
   a:hover, a:active {
     color: #c6dc9c;
@@ -114,7 +126,7 @@ img {
     margin-top: 10px;
     text-align: center;
     background: url(ribbon.png) no-repeat;
-    font-family: sans-serif;
+    sans-font()
     font-size: 16px;
     text-shadow: 0 1px 1px #097503;
     line-height: 20px;
@@ -126,7 +138,7 @@ img {
     margin: 5px;
     text-align: center;
     width: 60px;
-    font-family: 'Unna', serif;
+    display-font()
     p {
       text-align: left;
       margin: 0;
@@ -142,7 +154,7 @@ img {
   min-height: 170px;
   h1 {
     padding-top: 5px;
-    font-family: 'Unna', serif;
+    display-font()
     font-size: 36px;
     font-weight: normal;
     margin: 0;
@@ -193,31 +205,49 @@ img {
     padding: 8px !important;
     background-color: #222;
     color: #fff;
-    box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.35) inset;
+    box-shadow: 0px 1px 6px 0px rgba(0,0,0,1) inset;
     border-radius: 0px;
     border: 0 !important;
     overflow: hidden;
     line-height: 1.2em;
   }
-  .filename {
-    padding: 3px 5px;
-  }
-  .filename {
-    background: #fff;
-    color: #000;
-    float: right;
-    margin: -10px -10px 0 4px;
-    border-radius: 0 0 0 3px;
-    opacity: 0.4; 
-  }
-  .filename:hover {
-    opacity: 0.7;
-    text-decoration: none;
-  }
-  code {
+  .snippet {
+    pre {
+      margin: 0;
+    }
+    margin: 1em 0;
+    .filename, .toolbar {
+      sans-font()
+      font-size: 12px;
+      background-color: #777;
+      color: #eee;
+    }
+    .filename {
+      padding: 2px 5px;
+      float: right;
+      margin: -10px -10px 0 4px;
+      border-radius: 0 0 0 3px;
+    }
+    .filename:hover {
+      text-decoration: none;
+      color: #fff;
+    }
+    .toolbar {
+      border-radius: 0 0 4px 4px;
+      text-align: right;
+      padding: 3px 10px;
+      a, a:visited {
+        text-decoration: none;
+        color: #eee;
+      }
+      a:hover, a:active {
+        text-decoration: underline;
+        color: #fff;
+      }
+    }
   }
   .drop-caps {
-    font-family: 'Unna', serif;
+    display-font()
     opacity: 0.8;
     display: block;
     float: left;
@@ -244,48 +274,33 @@ img {
 
 }
 
-.social-buttons {
-
-}
-.social-buttons > div {
-    float: left !important;
-}
-.twitter-share-button {
-    float: left;
-    width: 90px !important;
-}
-.fb-like {
-    width: 100px;
-    padding-left: 15px;
-    overflow: hidden;
-}
 .article-links {
-    text-align: right;
+  text-align: right;
 }
 .article-links a {
-    font-family: 'Unna', serif;
-    font-size: 14px;
+  display-font()
+  font-size: 14px;
 }
 .article-divider {
-    background: url(article-divider.png) no-repeat scroll 0 0;
-    display: block;
-    height: 23px;
-    width: 616px;
-    margin-top: 20px;
+  background: url(article-divider.png) no-repeat scroll 0 0;
+  display: block;
+  height: 23px;
+  width: 616px;
+  margin-top: 20px;
 }
 
 .searchbox {
-    margin: 45px 0 6px 20px;
-    display: inline-block;
-    height: 19px;
-    border: 0;
-    padding: 4px 5px;
-    font-size: 13px;
-    line-height: 13px;
-    width: 220px;
-    border-radius: 4px;
-    box-shadow: 2px 0px 2px rgba(0,0,0,0.5);
-    font-family: sans-serif;
+  margin: 45px 0 6px 20px;
+  display: inline-block;
+  height: 19px;
+  border: 0;
+  padding: 4px 5px;
+  font-size: 13px;
+  line-height: 13px;
+  width: 220px;
+  border-radius: 4px;
+  box-shadow: 2px 0px 2px rgba(0,0,0,0.5);
+  sans-font()
 }
 
 .header {
@@ -298,7 +313,7 @@ img {
     h2 {
       margin: 40px 0 0 0;
       padding: 0;
-      font-family: 'Unna', serif;
+      display-font()
     }
     .button {
       background-image: url(buttons.png);
@@ -343,7 +358,7 @@ img {
 }
 
 .footer {
-  font-family: serif;
+  body-font()
   background: #383838 url(footer.jpg) bottom repeat-x;
   color: #757575;
   font-size: 12px;
