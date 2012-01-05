@@ -111,7 +111,7 @@ img {
   margin-top: 10px;
   text-align: center;
   background: url("ribbon.png") no-repeat;
-  font-family: 'Cabin', sans-serif;
+  font-family: sans-serif;
   font-size: 16px;
   text-shadow: 0 1px 1px #097503;
   line-height: 20px;
@@ -178,8 +178,8 @@ img {
   text-decoration: underline;
 }
 .article p {
-  font-size: 14px;
-  line-height: 21px;
+  font-size: 16px;
+  line-height: 23px;
 }
 .article p code {
   display: inline-block;
@@ -226,7 +226,6 @@ img {
   line-height: 40px;
   font-size: 48px;
   padding-right: 10px;
-  padding-bottom: 10px;
 }
 .article .content {
   min-height: 90px;
@@ -269,7 +268,6 @@ img {
   margin-top: 20px;
 }
 .searchbox {
-  height: 47px;
   margin: 45px 0 6px 20px;
   display: inline-block;
   height: 19px;
@@ -282,7 +280,7 @@ img {
   -webkit-box-shadow: 2px 0px 2px rgba(0,0,0,0.50);
   -moz-box-shadow: 2px 0px 2px rgba(0,0,0,0.50);
   box-shadow: 2px 0px 2px rgba(0,0,0,0.50);
-  font-family: Arial;
+  font-family: sans-serif;
 }
 .header .logo {
   float: left;
@@ -342,7 +340,7 @@ img {
   color: #fefefe;
 }
 .footer {
-  font-family: 'Garamond', serif;
+  font-family: serif;
   background: #383838 url("footer.jpg") bottom repeat-x;
   color: #757575;
   font-size: 12px;
