@@ -5,6 +5,7 @@
   <link href='http://fonts.googleapis.com/css?family=Unna|EB+Garamond|Ubuntu+Mono' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/style.css"/>
   <link rel="stylesheet" href="/obsidian.css"/>
+  <link href='http://fonts.googleapis.com/css?family=Unna|Cabin' rel='stylesheet' type='text/css' />
   <script src="/script.js"></script>
 </head>
 <body>
@@ -12,6 +13,7 @@
   <div class="wrapper">
   {render("header", this)}
   <div class="section body">
+    {render("sidebar", this)}
     <div class="main-column">
       {render("article", article)}
       <div id="disqus_thread"></div>
@@ -30,7 +32,6 @@
       <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
     </div>
-    {render("sidebar", this)}
   </div>
   {render("footer", this)}
   </div>

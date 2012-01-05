@@ -5,12 +5,14 @@
   <link href='http://fonts.googleapis.com/css?family=Unna|EB+Garamond|Ubuntu+Mono' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/style.css"/>
   <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/feed.xml" />
+  <link href='http://fonts.googleapis.com/css?family=Unna|Cabin' rel='stylesheet' type='text/css' />
 </head>
 <body>
   <div style="display:none;"><img src="/top_bg_tile.png"/><img src="/body_bg_tile.jpg"/></div>
   <div class="wrapper">
   {render("header", this)}
   <div class="section body">
+    {render("sidebar", this)}
     <div class="main-column">
       {#blockIf(!articles.length)}
         <p>Sorry, Your node version query has filtered out all the articles on this page.  Try one of the following.</p>
@@ -52,7 +54,6 @@
         </section>
       {/loopQuery}
     </div>
-    {render("sidebar", this)}
   </div>
   {render("footer", this)}
   </div>
