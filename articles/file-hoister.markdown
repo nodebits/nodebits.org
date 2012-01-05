@@ -1,4 +1,4 @@
-One of the goals of this new website is to provide simple and easy to understand projects that can be taken apart and tinkered with.  This is the first article in this series called `sample-app` in the categories on the right.
+One of the goals of nodebits is to provide simple and easy to understand projects that can be taken apart and tinkered with. Click on the `sample-app` category link on the right to find other articles like this in the future.
 
 In this edition, we will stack up a simple server that takes your filesystem and hoists it up on the internet via HTTP.  You can download and browse files using `GET` requests and (when authenticated) `DELETE` files and `PUT` new files.
 
@@ -6,7 +6,7 @@ To keep things basic, we won't be using [ExpressJS][] or even [Connect][].  We'l
 
 ## Getting Started With a New App
 
-Normally you would start by installing [NodeJS][], [npm][], and [git][] and then running `git init` in a new folder.  A nifty feature of this site is that the example code for all articles on this site is already in a [git repo][] and you can edit and run the code directly in your browser.
+Normally you would start by installing [NodeJS][], [npm][], and [git][] and then running `git init` in a new folder.  A nifty feature of this site is that the example code for all articles is already in [git][] and you can edit and run the code directly in your browser.
 
 First we'll create a `package.json` file so that we can declare our dependencies.
 
@@ -16,7 +16,7 @@ Here I filled in the minimal fields to get started.  The only optional field was
 
 ## Step Zero - An HTTP Server
 
-As a setup step, let's get a web server up and running.  We want to use the Stack and Creationix libraries to help us so we'll make a single-layer stack that simple logs all requests and responds with 404 codes.
+As a setup step, let's get a web server up and running.  We want to use the Stack and Creationix libraries to help us so we'll make a single-layer stack that logs all requests and responds with 404 codes.
 
     #@git://github.com/nodebits/file-hoister.git#step0.js
 
@@ -50,9 +50,9 @@ This step is pretty easy.  There are many modules on npm that serve files for no
 
 [Indexer][] will match against requests to directories and render a nice html directory listing.
 
-[Static][] will match against requests for files.  If the file exists, it will look up it's mime type, send the right headers, and stream it to the browser.  Also it will respond with 304 responses using timestamps and `Last-Modified` headers.
+[Static][] will match against requests for files.  If the file exists, it will look up its mime type, send the right headers, and stream it to the browser.  Also it will respond with 304 Not Modified responses using timestamps and `Last-Modified` headers.
 
-Any request that falls through both layers will simply return the same 404 as before that coming from Stack itself.
+Any request that falls through both layers will return a 404 Not Found response.
 
 Go ahead.  Run this new version and see your file listing and contents in your browser!
 
@@ -62,17 +62,17 @@ Serving in plain text over HTTP is fine for public information and read-only con
 
 To create a certificate, follow the instructions in the [tls][] section of the docs.  I've created a self-signed certificate and put it in the repo. (It's not actually secure if you check your private key into a public repo like this.)
 
-Ok, now to adjust the server to use https.  One change is to swap which module we're loading and add in the FS module for loading the cert. Also we'll need to load the cert files into an options object to pass into the `HTTPS.createServer` call.  Here is the new complete code listing after converting it to useing HTTPS with a self-signed cert.
+Ok, now to adjust the server to use https.  One change is to swap which module we're loading and add in the FS module for loading the cert. We'll also need to load the certificate files into an options object to pass into the `HTTPS.createServer` call.  Here is the new complete code listing after converting it to using HTTPS with a self-signed certificate.
 
     #@git://github.com/nodebits/file-hoister.git#step2.js
 
-When you make a request to this server with a browser, you'll probably get a nasty warning about it not being trusted.  If you're sure it's your server, then it's quite secure.  It's just not safe for servers in the wild to use self-signed certs because they could be impostors.
+When you make a request to this server with a browser, you'll probably get a nasty warning about it not being trusted.  If you're sure it's your server, then it's quite secure.  It's just not safe for servers in the wild to use self-signed certificates because they could be impostors.
 
 ## Step Three - Authentication and Authorization
 
 Having a strongly encrypted connection alone isn't enough to make your site safe.  We also need to authenticate users and then authorize them for specific tasks.  To do this, we'll use HTTP basic auth and some simple objects to store data.
 
-For username password combos, we'll just store them in the clear within the source.  Don't do this in a real website! But for streaming movies over you home network, it's probably fine.
+For username password combos, we'll just store them in the clear within the source.  Don't do this in a real website! But for streaming movies over your home network, it's probably fine.
 
     #@git://github.com/nodebits/file-hoister.git#step3.js,20-23
 
@@ -80,11 +80,11 @@ And then to authorize these users to various privileges, use another object:
 
     #@git://github.com/nodebits/file-hoister.git#step3.js,26-30
 
-Then we'll use the [auth] module to handle the nitty-gritty details for us.  We just need to write a callback function for telling the system is a given username and password is allowed to make a request.
+Then we'll use the [auth] module to handle the nitty-gritty details for us.  It's configured with  a callback that, when given a username, password, and request object, will return with a valid username or false.
 
     #@git://github.com/nodebits/file-hoister.git#step3.js,33-38
 
-Now when a request is made to the site, the browser is requested to provide credentials.  Each request will be filtered by the user and their allowed HTTP verbs.
+Now all HTTP requests are required to be authenticated and will fail if the given HTTP verb is not allowed for that user.
 
 ## Step Four - Writing to the Filesystem
 
@@ -94,11 +94,11 @@ This is actually quite simple by using a couple other built-in parts to the Crea
 
     #@git://github.com/nodebits/file-hoister.git#server.js,41-48
 
-[Deleter][] will match against request with the `DELETE` verb and delete the matched file in the filesystem.
-
 [Uploader][] will match against `PUT` requests and stream the raw request body to a file in the filesystem.
 
-With this, you're done!  As a homework, turn this into a command-line tool for quickly hoisting a filesystem to the network for quick filesharing.  There are great node modules for option parsing.  Also feel free to use other libraries.  These were used because their code is fairly short and to the point.
+[Deleter][] will match against request with the `DELETE` verb and delete the matched file in the filesystem.
+
+With this, you're done!  As homework, turn this into a command-line tool for quickly hoisting a filesystem to the network for quick filesharing.  There are great node modules for option parsing.  Also feel free to use other libraries.  These were used because their code is fairly short and to the point.
 
 [tls]: http://nodejs.org/docs/v0.6.6/api/tls.html#tLS_
 [Indexer]: https://github.com/creationix/creationix/blob/master/indexer.js
