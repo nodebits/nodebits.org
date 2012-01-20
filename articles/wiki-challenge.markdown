@@ -1,11 +1,11 @@
 
-TODO, write a clever intro paragraph that gets readers interested in taking the challenge of starting with this simple, boring HTML form based wiki and turning it into something amazing.
-
------------------------
+Announcing the great wiki challenge!  This challenge will start out with the most basic program that can be possibly by called a wiki.  I'll quickly explain how it works.  From there it's in your hands to take this piece of code and give it the attention is desperately needs.  If you do well, you will be rewarded richly in more ways than one.
 
 ## The Express Route to Building a Apps
 
 While this sample wiki may use technology over a decade old on the browser, it's powered by a hip new server-side framework known as [Express][].  This framework, which I helped with by co-authoring the [Connect][] middleware system back in the summer of 2010, makes it very easy write route based HTTP applications.  Express has a view render system built in and some nice helper functions that make life easier for the typical web developer.
+
+-----------------------
 
 The first step for rapid development is to use the `express` command line script.  To install it simple install express globally with [npm][].
 
@@ -39,6 +39,8 @@ For more information on using [Express][], see it's webpage or join the express 
 ## Back to the Wiki
 
 I won't walk you through all the steps I used to build this simple express based wiki.  It would make this article long and boring.  But I will quickly show you around the code.
+
+To follow along with a live running app, click on and any of the "Run in Cloud9" links to clone this repo to your personal c9.io environment.  Once cloned, run `npm install` in the console at the bottom to install the needed dependencies.  Then run the `app.js` script.
 
 The first interesting file is the `app.js` main script.  Near the bottom of this script is a place to declare your routes.  I have four simple routes as follows:
 
@@ -132,6 +134,6 @@ I've always loved tinkering with small machines and making them do interesting t
 Enter for the glory, enter for the fun, enter to challenge yourself and learn more node!
 
 
-[BeagleBone]: http://bone.beagleboard.com/
+[BeagleBone]: http://beagleboard.org/bone
 [Express]: http://expressjs.org/
 [Connect]: http://senchalabs.github.com/connect/
