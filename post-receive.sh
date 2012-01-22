@@ -1,5 +1,3 @@
 #!/bin/sh
-cd /home/tim/nodemanual.org
+cd /home/tim/nodebits.org
 git pull origin master
-git submodule update --init
-node build.js
