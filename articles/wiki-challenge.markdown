@@ -1,4 +1,3 @@
-
 In celebration of the official launch of Nodebits.org (<http://c9.io/blog-entry>), we’re introducing Nodebits’ first official contest – The Great Wiki Challenge. 
 
 ## The Rules
@@ -15,24 +14,24 @@ The due date for entries is the close of Node Summit.  Your entry must be made b
 
 We will judge entries on the following criteria:
 
- - *Creativeness* - Make it something neat.  Think outside the box.  Have fun.
+ - *Creativity* - Make it something neat.  Think outside the box.  Have fun.
  - *Beauty* - Both the final interface and the source code that generates it should be pleasing to the eye.
  - *Usefulness* - What good is a tool if it's not useful to anyone.  Make it actually useful too.
  - *Simplicity* - This is an often overlooked trait in software.  Yes it often competes with the other goals, but it's a goal that must always be kept in mind.  The code shouldn't be any more complicated than necessary.  The user interface should be simple *and* easy to understand. 
 
 ### Prizes
 
-I'm sure all of you don't need a prize to help motivate you in this endeavor, but I think prized make the competition funner.
+I'm sure all of you don't need a prize to help motivate you in this endeavor, but I think prizes make the competition more fun.
 
 I've always loved tinkering with small machines and making them do interesting things.  Laptops and desktops are cool, but there is only so much they can do in the physical world.  We will be giving away [BeagleBone][] kits to the winners along with a slew of fun hardware add-ons to make really cool NodeJS powered robots.
 
-If you enjoy using Cloud9 for developing your awesome wiki, the same environment (albeit a slightly older version) is used in the bundled SDK of the beaglebone.  Node and a full IDE is run from an embedded device that fits into a used altoids can.
+If you enjoy using Cloud9 for developing your awesome wiki, the same environment (albeit a slightly older version) is used in the bundled SDK of the beaglebone.  Node and a full IDE runs from an embedded device that fits into a used altoids can.
 
 Enter for the glory, enter for the fun, enter to challenge yourself and learn more node!
 
 -----------------------
 
-## The Express Route to Building a Apps
+## The Express Route to Building an App
 
 Ok, now let's dig into the actual code that will be the base for your entry.
 
