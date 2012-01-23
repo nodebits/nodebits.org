@@ -1,11 +1,42 @@
 
-Announcing the great wiki challenge!  This challenge will start out with the most basic program that can be possibly by called a wiki.  I'll quickly explain how it works.  From there it's in your hands to take this piece of code and give it the attention is desperately needs.  If you do well, you will be rewarded richly in more ways than one.
+In celebration of the official launch of Nodebits.org (<http://c9.io/blog-entry>), we’re introducing Nodebits’ first official contest – The Great Wiki Challenge. 
+
+## The Rules
+
+Ok, the goal of this contest is simple.  Take this basic wiki (explained below) and turn it into something beautiful.  The sky is the limit.  You can add whatever features you think make for an awesome wiki.
+
+The completed entry needs to be runnable in the [Cloud9][] development environment.  Simply start by clicking on any of the "Edit in Cloud9" links on the code snippets and this git repo will automatically be cloned into your personal c9.io environment (don't worry, it's free).  From there you can develop your additions and test your code.
+
+### Submitting an Entry
+
+The due date for entries is the close of Node Summit.  Your entry must be made before the conference ends on Wednesday evening in San Francisco.  Simply tag your git repository with `wiki-contest` and tweet a link to your c9.io project to @nodebits.
+
+### Judging
+
+We will judge entries on the following criteria:
+
+ - *Creativeness* - Make it something neat.  Think outside the box.  Have fun.
+ - *Beauty* - Both the final interface and the source code that generates it should be pleasing to the eye.
+ - *Usefulness* - What good is a tool if it's not useful to anyone.  Make it actually useful too.
+ - *Simplicity* - This is an often overlooked trait in software.  Yes it often competes with the other goals, but it's a goal that must always be kept in mind.  The code shouldn't be any more complicated than necessary.  The user interface should be simple *and* easy to understand. 
+
+### Prizes
+
+I'm sure all of you don't need a prize to help motivate you in this endeavor, but I think prized make the competition funner.
+
+I've always loved tinkering with small machines and making them do interesting things.  Laptops and desktops are cool, but there is only so much they can do in the physical world.  We will be giving away [BeagleBone][] kits to the winners along with a slew of fun hardware add-ons to make really cool NodeJS powered robots.
+
+If you enjoy using Cloud9 for developing your awesome wiki, the same environment (albeit a slightly older version) is used in the bundled SDK of the beaglebone.  Node and a full IDE is run from an embedded device that fits into a used altoids can.
+
+Enter for the glory, enter for the fun, enter to challenge yourself and learn more node!
+
+-----------------------
 
 ## The Express Route to Building a Apps
 
-While this sample wiki may use technology over a decade old on the browser, it's powered by a hip new server-side framework known as [Express][].  This framework, which I helped with by co-authoring the [Connect][] middleware system back in the summer of 2010, makes it very easy write route based HTTP applications.  Express has a view render system built in and some nice helper functions that make life easier for the typical web developer.
+Ok, now let's dig into the actual code that will be the base for your entry.
 
------------------------
+The wiki is powered by a hip new server-side framework known as [Express][].  This framework, which I helped with by co-authoring the [Connect][] middleware system back in the summer of 2010, makes it very easy write route based HTTP applications.  Express has a view render system built in and some nice helper functions that make life easier for the typical web developer.
 
 The first step for rapid development is to use the `express` command line script.  To install it simple install express globally with [npm][].
 
@@ -100,40 +131,9 @@ All that's left is to write a route that handles the POST request, saves the mar
 
 And with that we have a wiki!
 
-## Making it Not Suck -- A Challenge
+Now go forth and make it better.  I'm excited to see what everyone comes up with.
 
-Ok, so technically I did make a wiki, but it's pretty ugly and bare bones.  There is no access control, no history, no css, no JavaScript in the browser.  All changes require a full page reload and at least one full round-trip to the server.
-
-So to keep things interesting, I've discussed with my employer and we agreed that it would be fun to make a contest out of this.  There will be prizes and fun will be had.
-
-### The Rules
-
-The goal of this contest is simple.  Take this basic program and turn it into something beautiful.  The sky is the limit.  You can add whatever features you think make for an awesome wiki.  You can use AJAX or websockets instead of old-school form submits.  I would highly recommend adding some CSS to make it not ugly.
-
-The completed entry needs to be runnable in the Cloud9 Environment (don't worry free accounts can do this).  Simply start by clicking on any of the "Edit in Cloud9" links on the code snippets and this git repo will automatically be cloned into your personal c9.io environment.  From there you can develop your additions and test your code.
-
-### Submitting an Entry
-
-The due date for entries is the close of Node Summit.  Your entry must be made before the conference ends on Wednesday evening in San Francisco.  Simply tag your git repository with `wiki-contest` and tweet a link to your c9.io project to @nodebits.
-
-### Judging
-
-We will judge entries on the following criteria:
-
- - *Creativeness* - Make it something neat.  Think outside the box.  Have fun.
- - *Beauty* - Both the final interface and the source code that generates it should be pleasing to the eye.
- - *Usefulness* - What good is a tool if it's not useful to anyone.  Make it actually useful too.
- - *Simplicity* - This is an often overlooked trait in software.  Yes it often competes with the other goals, but it's a goal that must always be kept in mind.  The code shouldn't be any more complicated than necessary.  The user interface should be simple *and* easy to understand. 
-
-### Prizes
-
-I'm sure all of you don't need a prize to help motivate you in this endeavor, but I think prized make the competition funner.
-
-I've always loved tinkering with small machines and making them do interesting things.  Laptops and desktops are cool, but there is only so much they can do in the physical world.  We will be giving away [BeagleBone][] kits to the winners along with a slew of fun hardware add-ons to make really cool NodeJS powered robots.
-
-Enter for the glory, enter for the fun, enter to challenge yourself and learn more node!
-
-
+[Cloud9]: http://c9.io/
 [BeagleBone]: http://beagleboard.org/bone
 [Express]: http://expressjs.org/
 [Connect]: http://senchalabs.github.com/connect/
