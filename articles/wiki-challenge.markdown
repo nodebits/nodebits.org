@@ -1,5 +1,5 @@
 
-In celebration of the official launch of Nodebits.org ("[BlogPost][]"), we’re introducing Nodebits’ first official contest – The Great Wiki Challenge. 
+In celebration of the official launch of Nodebits.org ("[Our Commitment to the Node.js Community][]"), we’re introducing Nodebits’ first official contest – The Great Wiki Challenge. 
 
 ## The Rules
 
@@ -133,7 +133,7 @@ And with that we have a wiki!
 
 Now go forth and make it better.  I'm excited to see what everyone comes up with.
 
-[BlogPost]: http://cloud9ide.posterous.com/our-commitment-to-the-nodejs-community
+[Our Commitment to the Node.js Community]: http://cloud9ide.posterous.com/our-commitment-to-the-nodejs-community
 [Cloud9]: http://c9.io/
 [BeagleBone]: http://beagleboard.org/bone
 [Express]: http://expressjs.org/
