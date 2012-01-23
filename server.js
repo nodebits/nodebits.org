@@ -1,14 +1,24 @@
-var Http = require('http'),
-    Stack = require('stack'),
-    Creationix = require('creationix');
+var HTTP = require('http');
+var FS = require('fs');
 
-var port = process.env.PORT || 8081;
+var handle = require('./app');
 
-Http.createServer(Stack(
-  Creationix.log(),
-  require('./app')
-)).listen(port);
-console.log("Server listening at http://localhost:%s/", port);
+// Detect if we're running as root or not
+var isRoot = !process.getuid();
 
+// Set some common variables
+var PORT = process.env.PORT || 8000;
 
+HTTP.createServer(handle).listen(PORT);
+process.title ="nodebits.org";
+console.log("Server %s listening at http://localhost" + (PORT === 80 ? "" : ":" + PORT) + "/", process.title);
+
+if (isRoot) {
+  // Lets change to the owner of this file, whoever that may be
+  var stat = FS.statSync(__filename);
+  console.log("Changing gid to " + stat.gid);
+  process.setgid(stat.gid);
+  console.log("Changing uid to " + stat.uid);
+  process.setuid(stat.uid);
+}
 
