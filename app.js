@@ -6,7 +6,7 @@ var Stack = require('stack'),
 var blog = Nog(__dirname);
 blog.warehouse();
 
-module.exports = Stack.compose(
+module.exports = Stack(
   Creationix.postReceive("/post-receive", Path.join(__dirname, "/post-receive.sh"), blog.warehouse),
   blog
 );
