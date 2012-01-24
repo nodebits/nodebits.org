@@ -359,26 +359,41 @@ img {
 
 .footer {
   body-font()
-  background: #383838 url(footer.jpg) bottom repeat-x;
-  color: #757575;
-  font-size: 12px;
-  font-weight: bold;
+  background: url(footer-trans.png) bottom repeat-x;
+  color: #ffffff;
+  font-size: 11px;
+  padding: 0 25px;
+  height: 148px;
   margin-bottom: 40px;
-  -webkit-box-shadow: 0 3px 5px 0 #000000;
-  -moz-box-shadow: 0 3px 5px 0 #000000;
-  box-shadow: 0 3px 5px 0 #000000;
+  width: 958px;
+  .bold-text {
+    font-size: 12px;
+    font-weight: bold;
+  }
   p {
     margin: 0;
   }
+  a {
+    color: #cae994;
+    text-decoration: none;
+  }
+  a:hover, a:active {
+      color: #cae994;
+      text-decoration: underline;
+  }
   .sponsor {
-    padding: 20px 40px 30px;
-    width: 470px;
+    margin-right: 280px;
+    padding: 20px 0 30px;
+    width: 240px;
     display: inline-block;
+    img {
+        margin: 5px 0;
+    }
   }
   .copyright {
-    padding: 20px;
-    width: 400px;
     display: inline-block;
+    width: 420px;
+    text-shadow: 0 1px 1px #48484a;
   }
 }
 
