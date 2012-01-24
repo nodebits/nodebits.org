@@ -8,7 +8,7 @@ The completed entry needs to be runnable in the [Cloud9][] development environme
 
 ### Submitting an Entry
 
-The due date for entries is the close of Node Summit.  Your entry must be made before <del>Friday, January 27th, at 8pm PST</del> **Update**: Due to popular request, we've changed the deadline to Monday, January 30th, at 12:01am PST (-8 GMT).  Simply tag your git repository with `wiki-contest` and tweet a link to your c9.io project to @nodebits.
+The due date for entries is the close of Node Summit.  Your entry must be made before &lt;del>Friday, January 27th, at 8pm PST&lt;/del> **Update**: Due to popular request, we've changed the deadline to Monday, January 30th, at 12:01am PST (-8 GMT).  Simply tag your git repository with `wiki-contest` and tweet a link to your c9.io project to @nodebits.
 
 ### Judging
 
