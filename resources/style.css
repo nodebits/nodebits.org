@@ -356,6 +356,7 @@ img {
   color: #fff;
   font-size: 11px;
   padding: 0 25px;
+  font-family: arial;
   height: 148px;
   margin-bottom: 40px;
   width: 948px;
@@ -366,6 +367,7 @@ img {
 }
 .footer p {
   margin: 0;
+  line-height: 18px;
 }
 .footer a {
   color: #cae994;
@@ -378,7 +380,7 @@ img {
 }
 .footer .sponsor {
   margin-right: 280px;
-  padding: 20px 0 30px;
+  padding: 12px 0 0;
   width: 240px;
   display: inline-block;
 }
