@@ -24,6 +24,8 @@ got emitted.
 Hot dog, We're in business!  Now if only there was a document that explained
 what all that binary gobbly goop meant.
 
+--------------------------------------------------------------------------------
+
 ## Parsing the Output
 
 After some brief searching online, I discovered that this is the linux input
