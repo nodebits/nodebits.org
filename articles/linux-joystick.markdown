@@ -1,9 +1,11 @@
-Everyone knows that NodeJS can be used to make uber fast webservers.  But did
+Everyone knows that NodeJS can be used to make  über fast webservers.  But did
 you know that it's good for low level tasks too?  In this article we'll write a
 joystick driver for linux.  Technically it's not that low level, the kernel is
 handling the hard bits for us, but the results are still very cool.
 
-Those who have seen my past experiments with SDL and OpenGL in node know that I
+![f310](/linux-joystick/f310.png)
+
+Those who have seen my past experiments with [SDL][] and [OpenGL][] in node know that I
 love to give demos where I hook up a usb gamepad to a node server and do
 something cool with it.  The problem was that I needed C++ bindings to libSDL to
 be able to talk to the gamepad.
@@ -62,7 +64,7 @@ Running that and moving the joystick around gives me somewhat structured data:
     event <Buffer 10 62 f8 1a 01 00 01 01>
     event <Buffer 40 62 f8 1a 01 00 01 00>
 
-I know from the kernel documentation the the first four bytes are a timestamp.
+I know from the kernel documentation that the first four bytes are a timestamp.
 I can see from the output that it's little endian (the first byte changes very
 fast, the last doesn't change at all).  From the node docs, I see that we need
 [Buffer.readUInt32LE][].
@@ -83,7 +85,7 @@ Which outputs lines like:
 
     { time: 453074028, value: -9797, type: 2, number: 0 }
 
-## Making is Developer Friendly
+## Making it Developer Friendly
 
 Ok, so we've gone from ram binary blobs to some nice integers in a json object.
 But we can do better.  For example, the value is a 16 bit signed integer.  A
@@ -202,7 +204,8 @@ ability or desire to program in C++.  A great many things can be done in pure
 JavaScript.  NodeJS provides an amazing amount of system primitives used to
 write many types of software.
 
-
+[SDL]: https://github.com/creationix/node-sdl
+[OpenGL]: https://github.com/creationix/webgl-sdl
 [Buffer.readUInt32LE]: http://nodemanual.org/latest/nodejs_ref_guide/buffer.html#Buffer.readUInt32LE
 [Buffer.readInt16LE]: http://nodemanual.org/latest/nodejs_ref_guide/buffer.html#Buffer.readInt16LE
 [Buffer.readInt8]: http://nodemanual.org/latest/nodejs_ref_guide/buffer.html#Buffer.readInt8
