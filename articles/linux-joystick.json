@@ -1,6 +1,6 @@
 {
   "author": "authors/creationix",
-  "title": "Linux Joysticks and Other System Devices in Node",
+  "title": "Linux Joysticks and Other System Devices in NodeJS",
   "date": "Feb 7, 2012",
   "tags": ["linux", "low-level", "games"],
   "nodeVersion": "0.6.10"
