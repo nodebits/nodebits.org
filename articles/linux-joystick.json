@@ -1,0 +1,7 @@
+{
+  "author": "authors/creationix",
+  "title": "Linux Joysticks and Other System Devices in Node",
+  "date": "Feb 7, 2012",
+  "tags": ["linux", "low-level", "games"],
+  "nodeVersion": "0.6.10"
+}
