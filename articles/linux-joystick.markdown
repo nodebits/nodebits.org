@@ -74,7 +74,7 @@ The next two bytes are the value as a signed 16 bit integer. For this we need
 rarely mixed within a single struct.
 
 Then the last two values are regular unsigned 8 bit integers. I can use
-[Buffer.readInt8][] or just use the normal `[]` access that buffers always
+[Buffer.readUInt8][] or just use the normal `[]` access that buffers always
 provided.
 
 Updating the example, we add the following parse function:
@@ -209,5 +209,5 @@ Happy coding!
 [OpenGL]: https://github.com/creationix/webgl-sdl
 [Buffer.readUInt32LE]: http://nodemanual.org/latest/nodejs_ref_guide/buffer.html#Buffer.readUInt32LE
 [Buffer.readInt16LE]: http://nodemanual.org/latest/nodejs_ref_guide/buffer.html#Buffer.readInt16LE
-[Buffer.readInt8]: http://nodemanual.org/latest/nodejs_ref_guide/buffer.html#Buffer.readInt8
+[Buffer.readUInt8]: http://nodemanual.org/latest/nodejs_ref_guide/buffer.html#Buffer.readUInt8
 
