@@ -87,7 +87,7 @@ Which outputs lines like:
 
 ## Making it Developer Friendly
 
-Ok, so we've gone from ram binary blobs to some nice integers in a json object.
+Ok, so we've gone from raw binary blobs to some nice integers in a json object.
 But we can do better. For example, the value is a 16 bit signed integer. A
 float from -1 to 1 might be nice, might not. Also, what does type 2 mean anyway?
 Going back to the kernel docs, we read that the possible values of `type` are:
