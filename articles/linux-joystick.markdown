@@ -1,12 +1,12 @@
 Everyone knows that NodeJS can be used to make  über fast webservers. But did
 you know that it's good for low level tasks too?  In this article we'll write a
-joystick driver for linux. Technically it's not that low level, the kernel is
+joystick driver for Linux. Technically it's not that low level, the kernel is
 handling the hard bits for us, but the results are still very cool.
 
 ![f310](/linux-joystick/f310.png)
 
-Those who have seen my past experiments with [SDL][] and [OpenGL][] in node know that I
-love to give demos where I hook up a usb gamepad to a node server and do
+Those who have seen my past experiments with [SDL][] and [OpenGL][] in NodeJS know that I
+love to give demos where I hook up a usb gamepad to a NodeJS server and do
 something cool with it. The problem was that I needed C++ bindings to libSDL to
 be able to talk to the gamepad.
 
@@ -17,7 +17,7 @@ directly from the system device file and parse the protocol.
 
 One nice thing about Unix systems is that *everything* is a file. Folders are
 files. Processes are represented as files. And USB gamepads are represented as
-files!. So to test this theory, I ran `cat` on `/dev/input/js0` which is the
+files! So to test this theory, I ran `cat` on `/dev/input/js0` which is the
 representation of my first joystick. I then moved the joystick around and stuff
 got emitted.
 
@@ -30,7 +30,7 @@ what all that binary gobbly goop meant.
 
 ## Parsing the Output
 
-After some brief searching online, I discovered that this is the linux input
+After some brief searching online, I discovered that this is the Linux input
 joystick api documented at <http://www.kernel.org/doc/Documentation/input/joystick-api.txt>.
 
 In particular, the section about the format of the binary stuff that was getting
@@ -48,9 +48,9 @@ where js_event is defined as
       __u8 number;    /* axis/button number */
     };
 
-Clearly this is meant for C programmers, but using this information from a node
-program isn't hard. We have to calculate the `sizeof(struct js_event)` by hand.
-It's 8 bytes. And we don't want to use a blocking read, but luckilly a
+Clearly this is meant for C programmers, but using this information from a
+NodeJS program isn't hard. We have to calculate the `sizeof(struct js_event)` by
+hand. It's 8 bytes. And we don't want to use a blocking read, but luckilly a
 non-blocking read works fine too.
 
 Let's write a small program that constantly reads 8 byte chunks from the file.
@@ -66,7 +66,7 @@ Running that and moving the joystick around gives me somewhat structured data:
 
 I know from the kernel documentation that the first four bytes are a timestamp.
 I can see from the output that it's little endian (the first byte changes very
-fast, the last doesn't change at all). From the node docs, I see that we need
+fast, the last doesn't change at all). From the NodeJS docs, I see that we need
 [Buffer.readUInt32LE][].
 
 The next two bytes are the value as a signed 16 bit integer. For this we need
