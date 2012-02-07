@@ -23,7 +23,7 @@ got emitted.
 
 ![/dev/input/js0](/linux-joystick/js0.png)
 
-Hot dog, We're in business!  Now if only there was a document that explained
+Hot dog, we're in business!  Now if only there was a document that explained
 what all that binary gobbly goop meant.
 
 --------------------------------------------------------------------------------
