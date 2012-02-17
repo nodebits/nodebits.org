@@ -6,7 +6,7 @@ handling the hard bits for us, but the results are still very cool.
 ![f310](/linux-joystick/f310.png)
 
 Those who have seen my past experiments with [SDL][] and [OpenGL][] in NodeJS know that I
-love to give demos where I hook up a usb gamepad to a NodeJS server and do
+love to give demos where I hook up a USB gamepad to a NodeJS server and do
 something cool with it. The problem was that I needed C++ bindings to libSDL to
 be able to talk to the gamepad.
 
@@ -24,7 +24,7 @@ got emitted.
 ![/dev/input/js0](/linux-joystick/js0.png)
 
 Hot dog, we're in business!  Now if only there was a document that explained
-what all that binary gobbly goop meant.
+what all that binary nonesense meant.
 
 --------------------------------------------------------------------------------
 
